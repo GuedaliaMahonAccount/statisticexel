@@ -34,25 +34,25 @@ def calculate_statistics_for_column(df, column_name):
 # Load the Excel files
 df1 = pd.read_excel('Suspected.xlsx')
 df2 = pd.read_excel('Diagnosed.xlsx')
-df3 = pd.read_excel('normalCounted11.xlsx')
-df4 = pd.read_excel('normalCounted22.xlsx')
+df3 = pd.read_excel('Normal1.xlsx')
+df4 = pd.read_excel('Normal2.xlsx')
 
 
 # Column names to analyze
 columns_to_analyze = ['num of character', 'num of word']
 
-print("\nStatistics for suspectCounted.xlsx")
+print("\nStatistics for Suspected.xlsx")
 for column in columns_to_analyze:
     calculate_statistics_for_column(df1, column)
 
-print("\n\nStatistics for sureCounted.xlsx")
+print("\n\nStatistics for Diagnosed.xlsx")
 for column in columns_to_analyze:
     calculate_statistics_for_column(df2, column)
 
-print("\n\nStatistics for normalCounted11.xlsx")
+print("\n\nStatistics for Normal1.xlsx")
 for column in columns_to_analyze:
     calculate_statistics_for_column(df3, column)
 
-print("\n\nStatistics for normalCounted22.xlsx")
+print("\n\nStatistics for Normal2.xlsx")
 for column in columns_to_analyze:
     calculate_statistics_for_column(df4, column)
